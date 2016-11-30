@@ -1,0 +1,101 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	color: #373737;
+	font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+.section {
+	flex-grow: 1;
+	flex-basis: 0;
+	width: 100%;
+}
+
+.search {
+	color: #1ED760;
+	background-color: #373737;
+	display:flex; 
+	justify-content: center;
+	align-items: center;
+	min-height: 80vh;
+}
+
+.search-form {
+	text-align: center;
+}
+
+.search-form h1 {
+	color: rgb(30, 215, 95);
+	font-size: 2.5em;
+	font-weight: 900;
+	background-color: rgb(55, 55, 55);
+	text-shadow: rgb(10, 10, 10) 1px 1px 1px;
+}
+
+.search-form input {
+	height: 1.8em;
+	font-size: 1.5em;
+	padding:0.1em 0.4em;
+	width: 300px;
+	border: solid 1px black;
+}
+
+.search-form button {
+	border-radius: 0;
+	border: none;
+	height: 2em;
+	color: white;
+	font-weight: 700;
+	font-size: 1.5em;
+	background-color: #1ED760;
+	padding: 0.3em 1em;
+	text-shadow: rgba(10, 10, 10, 0.4) 1px 1px 1px;
+	cursor: pointer;
+}
+
+.search-form button:active {
+	background-color: #00db4c;
+	text-shadow: rgba(10, 10, 10, 0.8) 1px 1px 1px;
+	box-shadow: inset 0 0 0 2px #1BC456;
+}
+
+.tracks {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.row {
+	display: flex;
+	padding: 15px;
+	width: 700px;
+}
+
+.cover {
+	margin-right: 10px;
+	width: 100px;
+	height: 100px;
+}
+
+.cover img {
+	width: 100%;
+	height: 100%;
+}
+
+.info audio {
+	margin-top:6px; 
+	width: 550px;
+}
+
+.info div {
+	margin-bottom:3px;
+}

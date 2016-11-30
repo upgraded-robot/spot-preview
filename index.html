@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="section search">
+			<span class="search-form">
+				<h1>Spotify Preview</h1>
+				<input type="text" name="search">
+				<button type="submit"> Search  </button>
+			</span>
+		</div>
+		<div class="section tracks">
+			
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+	<script type="text/javascript" src="main.js"></script>
+	<script id="tracks-template" type="text/x-handlebars-template">
+		{{#each tracks}}
+	    <div class="row">
+			<div class="cover">
+				<img src={{this.album.images.1.url}}>
+			</div>
+			<div class="info">
+				<div>{{this.name}}</div>
+				<div>{{this.artists.0.name}}</div>
+				<div>{{this.album.name}}</div>	
+				<audio src={{this.preview_url}} controls="true"></audio>
+			</div>
+		</div>
+		{{/each}}
+	</script>
+</body>
+</html>
