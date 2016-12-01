@@ -19,8 +19,8 @@ $(document).ready(function(){
 				$('input[name=search]').val('')
 				$('.search').animate({"min-height":"30vh", "font-size":"10pt"}, 500)
 			}).fail(function(err){
-				console.log('unable to process request', err)
-				$('.tracks').append('unable')
+				console.log( err)
+				$('.tracks').append('<div class="error">Unable to process request</div>')
 			})
 		}
 	})
