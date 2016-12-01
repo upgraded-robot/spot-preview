@@ -27,6 +27,8 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 80vh;
+	height: 80vh;
+	font-size: 12pt;
 }
 
 .search-form {
