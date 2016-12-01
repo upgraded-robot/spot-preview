@@ -20,6 +20,10 @@ body {
 	width: 100%;
 }
 
+.error {
+	color:red;
+}
+
 .search {
 	color: #1ED760;
 	background-color: #373737;
