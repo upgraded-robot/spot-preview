@@ -18,8 +18,8 @@ $(document).ready(function(){
 				//empty search input field
 				$('input[name=search]').val('')
 				$('.search').animate({"min-height":"30vh", "font-size":"10pt"}, 500)
-			}).fail(function(){
-				console.log('unable to process request')
+			}).fail(function(err){
+				console.log('unable to process request', err)
 			})
 		}
 	})
