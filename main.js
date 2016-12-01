@@ -5,7 +5,7 @@ $(document).ready(function(){
 			$('.tracks').empty() //remove previously found tracks
 			$('.previous-search').detach() //remove previous search term
 			var q = $('input[name=search]').val() //get search term from input
-			var url = `https://api.spotify.com/v1/search?q=${q}&type=track` //spotify api endpoint
+			var url = 'https://api.spotify.com/v1/search?q='+q+'&type=track' //spotify api endpoint
 			// ajax call 
 			$.ajax({ 
 				method:'get',
@@ -14,12 +14,13 @@ $(document).ready(function(){
 				//append the compiled template where tracks will be the tracks.items object of the ajax response
 				$('.tracks').append(template({tracks:data.tracks.items}))
 				//append div showing the searched keyword
-				$('.search-form').append(`<div class="previous-search">Displaying results for: ${q}</div>`) 
+				$('.search-form').append('<div class="previous-search">Displaying results for:'+q+'</div>') 
 				//empty search input field
 				$('input[name=search]').val('')
 				$('.search').animate({"min-height":"30vh", "font-size":"10pt"}, 500)
 			}).fail(function(err){
 				console.log('unable to process request', err)
+				$('.tracks').append('unable')
 			})
 		}
 	})
