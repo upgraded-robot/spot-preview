@@ -14,10 +14,10 @@ $(document).ready(function(){
 				//append the compiled template where tracks will be the tracks.items object of the ajax response
 				$('.tracks').append(template({tracks:data.tracks.items}))
 				//append div showing the searched keyword
-				$('.search-form').append('<div class="previous-search">Displaying results for:'+q+'</div>') 
+				$('.tracks').prepend('<div class="previous-search">Displaying results for:'+q+'</div>') 
 				//empty search input field
 				$('input[name=search]').val('')
-				$('.search').animate({"min-height":"30vh", "font-size":"10pt"}, 500)
+				$('.search').animate({"min-height":"30vh", "font-size":"10pt"}, 600)
 			}).fail(function(err){
 				console.log( err)
 				$('.tracks').append('<div class="error">Unable to process request</div>')

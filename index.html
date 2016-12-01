@@ -10,15 +10,17 @@
 <body>
 	<div class="wrapper">
 		<div class="section search">
-			<span class="search-form">
+			<div class="search-form">
 				<h1>Spotify Preview</h1>
 				<label for="name">Search by artist or track name</label>
 				<input type="text" name="search" autocomplete="off">
+				<div class="helper">To search press <strong>Enter</strong></div>
 				<!-- <button type="submit">Search</button>-->
-			</span>
+			</div>
 		</div>
 		<div class="section tracks">
 			<!-- Found tracks will be appended here -->
+			<div class="initial-message">Search for an artist or track to show</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
