@@ -52,6 +52,12 @@ body {
 	border: solid 2px black;
 }
 
+.search-form label {
+	display: block;
+	text-align: left;
+	padding: 7px 3px;
+}
+
 .search-form button {
 	border-radius: 0;
 	border: none;

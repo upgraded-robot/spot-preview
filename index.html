@@ -12,15 +12,19 @@
 		<div class="section search">
 			<span class="search-form">
 				<h1>Spotify Preview</h1>
+				<label for="name">Search by artist or track name</label>
 				<input type="text" name="search" autocomplete="off">
 				<!-- <button type="submit">Search</button>-->
 			</span>
 		</div>
-		<div class="section tracks"></div>
+		<div class="section tracks">
+			<!-- Found tracks will be appended here -->
+		</div>
 	</div>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
 	<script type="text/javascript" src="main.js"></script>
+	<!-- template for handlebars -->
 	<script id="tracks-template" type="text/x-handlebars-template">
 		{{#each tracks}}
 	    <div class="row">
@@ -36,5 +40,6 @@
 		</div>
 		{{/each}}
 	</script>
+	<!-- end of template for handlebars -->
 </body>
 </html>
